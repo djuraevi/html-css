@@ -1,3 +1,4 @@
+@import url("catalog.css");
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +9,9 @@ body {
 }
 a {
   text-decoration: none;
+}
+li {
+  list-style-type: none;
 }
 img {
   max-width: 100%;
@@ -251,7 +255,7 @@ img {
   background: #222224;
 }
 .subscribe {
-  background-image: url(img/backgroundSubscribe.jpg);
+  background-image: url(../img/backgroundSubscribe.jpg);
 }
 .subscribe__container {
   display: flex;
