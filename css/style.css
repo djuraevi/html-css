@@ -1,3 +1,4 @@
+@import url("catalog.css");
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +9,9 @@ body {
 }
 a {
   text-decoration: none;
+}
+li {
+  list-style-type: none;
 }
 img {
   max-width: 100%;
@@ -110,57 +114,97 @@ img {
   text-align: center;
   color: #f16d7f;
 }
-.fetured-items {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.product-box {
+  padding-bottom: 95px;
 }
-.fetured-items__title {
+.product-box__heading {
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
   line-height: 36px;
   color: #222222;
+  text-align: center;
 }
-.fetured-items__text {
+.product-box__text {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
   color: #9f9f9f;
+  text-align: center;
+  margin-top: 6px;
 }
-.card__container {
-  padding: 48px 0;
+.product-box__content {
+  margin-top: 48px;
   display: grid;
+  grid-template-columns: repeat(auto-fit, 360px);
+  justify-content: center;
   gap: 30px;
-  grid-template-columns: repeat(3, 1fr);
 }
-.card__description {
+.product__img {
+  width: 100%;
+}
+.product__add {
+  position: absolute;
+  top: 188px;
+  left: 111px;
+  width: 139px;
+  height: 44px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  gap: 11px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  border: 1px solid #fff;
+}
+.product__contetn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   padding: 24px 16px;
+  gap: 16px;
 }
-.card__heading {
+.product {
+  position: relative;
+}
+.product:hover .product__img {
+  filter: brightness(0.5);
+}
+.product:hover .product__add {
+  display: flex;
+}
+.product__heading {
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
   line-height: 16px;
   color: #000000;
 }
-.card__text {
+.product__text {
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
   line-height: 17px;
   color: #5d5d5d;
-  padding: 16px 0;
 }
-.card__price {
+.product__price {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   color: #f16d7f;
 }
-.fetured-items__btn {
+.product-box__button {
+  margin-top: 48px;
+  display: flex;
+  justify-content: space-around;
+}
+.product-box__btn {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -169,9 +213,13 @@ img {
   border: 1px solid #f26376;
   padding: 14px 38px;
 }
+.product-box__btn:hover {
+  background: #f16d7f;
+  border: 1px solid #ff6a6a;
+  color: #ffffff;
+}
 .offers {
   background: #222224;
-  margin-top: 95px;
   padding-top: 104px;
   padding-bottom: 104px;
 }
@@ -203,8 +251,11 @@ img {
   text-align: center;
   color: #fbfbfb;
 }
+.footer {
+  background: #222224;
+}
 .subscribe {
-  background-image: url(img/backgroundSubscribe.jpg);
+  background-image: url(../img/backgroundSubscribe.jpg);
 }
 .subscribe__container {
   display: flex;
@@ -283,9 +334,6 @@ img {
   border-radius: 0 25px 25px 0;
   border: none;
 }
-.footer {
-  background: #222224;
-}
 .footer__container {
   display: flex;
   align-items: center;
@@ -303,4 +351,10 @@ img {
 .footer__social {
   display: flex;
   gap: 7px;
+}
+.social__svg:hover path:first-child {
+  fill: #f16d7f;
+}
+.social__svg:hover path:last-child {
+  fill: #fff;
 }
