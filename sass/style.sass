@@ -1,5 +1,6 @@
 @import 'vars'
 @import 'catalog'
+@import 'product'
 
 *
   margin: 0
@@ -17,6 +18,11 @@ li
 
 img
   max-width: 100%
+
+summary
+  display: block
+  &::-webkit-details-marker
+    display: none
 
 .center
   padding-left: calc(50% - #{$widthSite / 2})
