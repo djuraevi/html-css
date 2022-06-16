@@ -26,6 +26,15 @@ summary
   &::-webkit-details-marker
     display: none
 
+input[type="number"]
+  -moz-appearance: textfield
+  -webkit-appearance: textfield
+  appearance: textfield
+
+input[type="number"]::-webkit-outer-spin-button
+input[type="number"]::-webkit-inner-spin-button
+  display: none
+
 .center
   padding-left: calc(50% - #{$widthSite / 2})
   padding-right: calc(50% - #{$widthSite / 2})

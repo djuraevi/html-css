@@ -40,13 +40,13 @@
         &:last-child
             display: flex
             gap: 24px
-        &:last-child > span
-            +flexCenter()
-            width: 44px
-            height: 25px
-            border: 1px solid #EAEAEA
         &-active
             color: $colorDetails !important
+    &__input
+        +font(400, 22px, 26px, #6F6E6E)
+        border: 1px solid #EAEAEA
+        padding-left: 16px
+        width: 44px
 
 .clear
     +container(235px, 50px, #FFFFFF, #A4A4A4)

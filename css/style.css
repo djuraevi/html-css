@@ -370,17 +370,19 @@
   gap: 24px;
 }
 
-.product__info:last-child > span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 25px;
-  border: 1px solid #EAEAEA;
-}
-
 .product__info-active {
   color: #ef5b70 !important;
+}
+
+.product__input {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #6F6E6E;
+  border: 1px solid #EAEAEA;
+  padding-left: 16px;
+  width: 44px;
 }
 
 .clear {
@@ -656,6 +658,14 @@ summary {
 }
 
 summary::-webkit-details-marker {
+  display: none;
+}
+
+input[type="number"] {
+  appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
   display: none;
 }
 
