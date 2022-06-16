@@ -1,6 +1,8 @@
 @import 'vars'
 @import 'catalog'
 @import 'product'
+@import 'cart'
+@import 'registration'
 
 *
   margin: 0
@@ -29,21 +31,18 @@ summary
   padding-right: calc(50% - #{$widthSite / 2})
 
 .header
-  display: flex
+  +flexAlignCenter()
   flex-direction: row
   flex-wrap: wrap
-  align-items: center
   justify-content: space-between
   min-height: 75px
   background: $colorContent
   &__left
-    display: flex
-    align-items: center
+    +flexAlignCenter()
     gap: 41px
 
   &__right
-    display: flex
-    align-items: center
+    +flexAlignCenter()
     gap: 33px
 
 .promo
@@ -63,18 +62,10 @@ summary
     margin-top: 48%
 
   &__title
-    font-style: normal
-    font-weight: 900
-    font-size: 48px
-    line-height: 58px
-    color: $colorContent
+    +font(900, 48px, 58px, $colorContent)
 
   &__heading
-    font-style: normal
-    font-weight: 700
-    font-size: 32px
-    line-height: 38px
-    color: $colorContent
+    +font(700, 32px, 38px, $colorContent)
 
   &__heading-span
     color: $colorSite
@@ -89,52 +80,30 @@ summary
     position: relative
 
   &__content
-    position: absolute
-    width: 100%
-    height: 100%
-    top: 0
-    left: 0
-    display: flex
+    +positionAbsolute()
+    +flexCenter()
     flex-direction: column
-    justify-content: center
-    align-items: center
 
   &__item-big
     min-height: 180px
     grid-column: 1 / -1
 
   &__text
-    font-style: normal
-    font-weight: 400
-    font-size: 16px
-    line-height: 19px
+    +font(400, 16px, 19px, #ffffff)
     text-align: center
-    color: #ffffff
 
   &__heading
-    font-style: normal
-    font-weight: 700
-    font-size: 24px
-    line-height: 29px
+    +font(700, 24px, 29px, $colorSite)
     text-align: center
-    color: $colorSite
 
 .product-box
   padding-bottom: 95px
   &__heading
-    font-style: normal
-    font-weight: 400
-    font-size: 30px
-    line-height: 36px
-    color: $colorContent
+    +font(400, 30px, 36px, $colorContent)
     text-align: center
 
   &__text
-    font-style: normal
-    font-weight: 400
-    font-size: 14px
-    line-height: 17px
-    color: #9f9f9f
+    +font(400, 14px, 17px, #9f9f9f)
     text-align: center
     margin-top: 6px
     margin-bottom: 48px
@@ -151,10 +120,7 @@ summary
     justify-content: space-around
 
   &__btn
-    font-style: normal
-    font-weight: 400
-    font-size: 16px
-    line-height: 19px
+    +font(400, 16px, 19px, #f26376)
     color: #f26376
     border: 1px solid #f26376
     padding: 14px 38px
@@ -180,10 +146,7 @@ summary
     align-items: center
     font-style: normal
     gap: 11px
-    font-weight: 400
-    font-size: 14px
-    line-height: 17px
-    color: #ffffff
+    +font(400, 14px, 17px, #ffffff)
     border: 1px solid #fff
 
   &__contetn
@@ -195,25 +158,13 @@ summary
     gap: 16px
 
   &__heading
-    font-style: normal
-    font-weight: 400
-    font-size: 13px
-    line-height: 16px
-    color: #000000
+    +font(400, 13px, 16px, #000000)
 
   &__text
-    font-style: normal
-    font-weight: 300
-    font-size: 14px
-    line-height: 17px
-    color: #5d5d5d
+    +font(300, 14px, 17px, #5d5d5d)
 
   &__price
-    font-style: normal
-    font-weight: 400
-    font-size: 16px
-    line-height: 19px
-    color: $colorSite
+    +font(400, 16px, 19px, $colorSite)
 
   &:hover .product__img
     filter: brightness(0.5)
@@ -226,49 +177,33 @@ summary
   padding-top: 104px
   padding-bottom: 104px
   &__items
-    display: flex
+    +flexCenter()
     flex-direction: row
     flex-wrap: wrap
-    justify-content: center
-    align-items: center
     gap: $gapGrid
 
 .offer-item
-  display: flex
+  +flexAlignCenter()
   flex-direction: column
-  align-items: center
   width: $widthThree
   &__heading
     padding: 28px 0 16px
-    font-style: normal
-    font-weight: 400
-    font-size: 19.96px
-    line-height: 24px
-    color: #fbfbfb
+    +font(400, 19px, 24px, #fbfbfb)
 
   &__text
-    font-style: normal
-    font-weight: 300
-    font-size: 13.972px
-    line-height: 17px
+    +font(300, 14px, 17px, #fbfbfb)
     text-align: center
-    color: #fbfbfb
 
 .footer
   background: #222224
   &__container
-    display: flex
-    align-items: center
+    +flexAlignCenter()
     justify-content: space-between
     padding-bottom: 24px
     padding-top: 24px
 
   &__copyright
-    font-style: normal
-    font-weight: 400
-    font-size: 16px
-    line-height: 19px
-    color: #fbfbfb
+    +font(400, 16px, 19px, #fbfbfb)
 
 .subscribe
   min-height: 448px
@@ -278,94 +213,60 @@ summary
   background-size: cover
   background-position: center bottom
   &__container
-    display: flex
+    +flexAlignCenter()
     flex-direction: row
     justify-content: space-between
-    align-items: center
     flex-wrap: wrap
     padding-top: 96px
 
   &__left
-    display: flex
+    +flexAlignCenter()
     flex-direction: column
-    align-items: center
 
   &__right
-    display: flex
+    +flexAlignCenter()
     flex-direction: column
-    align-items: center
 
   &__citation
     max-width: 360px
     padding-top: $gapGrid
-    font-style: normal
-    font-weight: 400
-    font-size: 20px
-    line-height: 24px
+    +font(400, 20px, 24px, #222224)
     text-align: center
-    color: #222224
 
   &__title
-    font-style: normal
-    font-weight: 700
-    font-size: 24px
-    line-height: 167.2%
-    color: #222224
+    +font(700, 24px, 167%, #222224)
 
   &__heading
-    font-style: normal
-    font-weight: 400
-    font-size: 18px
-    line-height: 167.2%
-    color: #222224
+    +font(400, 18px, 167%, #222224)
 
   &__input
-    height: 49px
-    width: 256px
     padding-left: 22px
-    font-style: normal
-    font-weight: 400
-    font-size: 14px
-    line-height: 17px
-    display: flex
-    align-items: center
-    color: #222224
+    +container(256px, 49px, #e1e1e1, #e1e1e1)
+    +font(400, 14px, 17px, #222224)
+    +flexAlignCenter()
     opacity: 0.67
-    background: #e1e1e1
     border-radius: 25px 0 0 25px
-    border: none
 
   &__btn
-    width: 100px
-    height: 49px
-    background: $colorSite
-    font-style: normal
-    font-weight: 400
-    font-size: 14px
-    line-height: 17px
+    +container(100px, 49px, $colorSite, $colorSite)
+    +font(400, 14px, 17px, #ffffff)
     text-align: center
-    color: #ffffff
     border-radius: 0 25px 25px 0
-    border: none
 
 .social
-  display: flex
-  align-items: center
+  +flexAlignCenter()
   gap: 7px
   &__link
     display: block
     background: #fff
     width: 32px
     height: 32px
-    display: flex
-    justify-content: center
-    align-items: center
+    +flexCenter()
     &:hover
       background-color: $colorSite
     &:hover path
       fill: #fff
 
 .form
-  display: flex
-  align-items: center
+  +flexAlignCenter()
   padding-top: 32px

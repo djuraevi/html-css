@@ -6,3 +6,32 @@ $colorContent: #222222
 $widthSite: 1140px
 $gapGrid: 30px
 $widthThree: ($widthSite - 2 * $gapGrid) / 3
+
+=positionAbsolute()
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+
+=flexAlignCenter()
+    display: flex
+    align-items: center
+
+=flexCenter()
+    display: flex
+    align-items: center
+    justify-content: center
+
+=font($weight, $size, $line, $color)
+    font-style: normal
+    font-weight: $weight
+    font-size: $size
+    line-height: $line
+    color: $color
+
+=container($width, $height, $background, $border)
+    width: $width
+    height: $height
+    background: $background
+    border: 1px solid $border

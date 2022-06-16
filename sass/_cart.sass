@@ -1,0 +1,100 @@
+.basket
+    padding-top: 96px
+    display: flex
+    justify-content: space-between
+
+.cart
+    display: flex
+    flex-direction: column
+    gap: 40px
+    &__product
+        width: 652px
+        display: flex
+        gap: 31px
+        box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13)
+    &__buttons
+        display: flex
+        gap: 192px
+        padding-top: 32px
+    &__close
+        padding-top: 28px
+
+.product
+    &__box
+        padding-top: 22px
+        width: 262px
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        gap: 6px
+    &__name
+        +font(400, 24px, 29px, $colorContent)
+        padding-bottom: 36px
+
+    &__info
+        +font(400, 22px, 26px, #575757)
+        display: flex
+        gap: 8px
+        & > span
+            color: #6F6E6E
+        &:last-child
+            display: flex
+            gap: 24px
+        &:last-child > span
+            +flexCenter()
+            width: 44px
+            height: 25px
+            border: 1px solid #EAEAEA
+        &-active
+            color: $colorDetails !important
+
+.clear
+    +container(235px, 50px, #FFFFFF, #A4A4A4)
+    +font(300, 14px, 17px, #000000)
+    &:last-child
+        width: 225px
+
+.shipping
+    display: flex
+    flex-direction: column
+    gap: 57px
+    &__address
+        display: flex
+        flex-direction: column
+        gap: 20px
+    &__text
+        +font(300, 16px, 19px, $colorContent)
+    &__input
+        +container(360px, 45px, #FFFFFF, #A4A4A4)
+        +font(300, 13px, 16px, $colorContent)
+        padding: 13px 0 16px 17px
+
+    &__button
+        padding-top: 3px
+        +container(100px, 35px, #ffffff, #A4A4A4)
+        +font(300, 11px, 13px,  #4A4A4A)
+    &__price
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+    &__sub
+        padding-top: 39px
+        +font(400, 11px, 13px, #4A4A4A)
+    &__sub > span
+        padding-left: 72px
+    &__grand
+        padding: 12px 0 21px
+        +font(300, 16px, 19px, $colorContent)
+    &__grand > span
+        padding-left: 56px
+        +font(700, 16px, 19px, $colorSite)
+    &__border
+        width: 275px
+        border: 1px solid #E2E2E2
+    &__button-price
+        margin-top: 17px
+        +container(273px, 50px, #ffffff, $colorSite)
+        +font(300, 16px, 19px, $colorSite)
+        &:hover
+            color: #ffffff
+            background: $colorSite
