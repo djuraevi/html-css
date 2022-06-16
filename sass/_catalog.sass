@@ -1,0 +1,131 @@
+
+.navigation
+  min-height: 148px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &__heading
+    font-style: normal
+    font-weight: 400
+    font-size: 24px
+    line-height: 29px
+    color: $colorSite
+
+.breadcrumb
+  display: flex
+  & > li:last-child .breadcrumb__link
+    font-weight: 700
+    color: $colorSite
+  & > li:not(:last-child)::after
+    padding: 0 8px
+    color: #636363
+    content: "/\00a0"
+  &__link
+    font-style: normal
+    font-weight: 300
+    font-size: 14px
+    line-height: 17px
+    color: #636363
+    &:hover
+      color: $colorSite
+
+.filter
+  width: 100%
+  padding: 13px 16px 16px
+  box-sizing: border-box
+  position: absolute
+  z-index: 1
+  &-box
+    width: $widthThree
+    position: relative
+    height: 40px
+  &__box
+    display: flex
+    flex-direction: column
+    gap: 11px
+    padding: 24px 16px
+  &__link
+    font-style: normal
+    font-weight: 400
+    font-size: 14px
+    line-height: 17px
+    color: #6F6E6E
+    &:hover
+      color: $colorSite
+  &__sort
+    padding-top: 51px
+    padding-bottom: 64px
+    display: flex
+    gap: 30px
+
+  &__summary
+    display: flex
+    align-items: center
+    gap: 11px
+  &[open]
+    background: #FFFFFF
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+    & .filter__summary
+      color: $colorSite
+    & .filter__img path
+      fill: $colorSite
+  &__category
+    margin-top: 16px
+    &-summary
+      font-weight: 400
+      font-size: 14px
+      line-height: 17px
+      color: #6F6E6E
+      padding: 8px 11px 11px
+      border-left: 5px solid $colorSite
+      border-bottom: 1px solid #EBEBEB
+  &[open] .filter__category-summary
+    color: $colorSite
+
+.sort
+  display: flex
+  gap: 28px
+  align-items: center
+  &__details
+    position: relative
+  &__summary
+    display: flex
+    align-items: center
+    gap: 10px
+  &__content
+    position: absolute
+    top: 22px
+    left: -9px
+    display: flex
+    flex-direction: column
+    gap: 6px
+    width: 79px
+    padding: 7px 9px 11px
+    z-index: 1
+    background: #FFFFFF
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+  &__label
+    display: flex
+    align-items: center
+    gap: 9px
+
+.pagination
+  padding-top: 48px
+  &__box
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 18px
+  &__numbers
+    display: flex
+    align-items: center
+    gap: 20px
+  &__number
+    font-style: normal
+    font-weight: 300
+    font-size: 16px
+    line-height: 19px
+    color: #c4c4c4
+
+._pagination__active
+  color: $colorDetails
