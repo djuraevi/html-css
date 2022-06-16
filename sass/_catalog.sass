@@ -5,11 +5,7 @@
   justify-content: space-between
   align-items: center
   &__heading
-    font-style: normal
-    font-weight: 400
-    font-size: 24px
-    line-height: 29px
-    color: $colorSite
+    +font(400, 24px, 29px, $colorSite)
 
 .breadcrumb
   display: flex
@@ -21,11 +17,7 @@
     color: #636363
     content: "/\00a0"
   &__link
-    font-style: normal
-    font-weight: 300
-    font-size: 14px
-    line-height: 17px
-    color: #636363
+    +font(300, 14px, 17px, #636363)
     &:hover
       color: $colorSite
 
@@ -45,11 +37,7 @@
     gap: 11px
     padding: 24px 16px
   &__link
-    font-style: normal
-    font-weight: 400
-    font-size: 14px
-    line-height: 17px
-    color: #6F6E6E
+    +font(400, 14px, 17px, #6F6E6E)
     &:hover
       color: $colorSite
   &__sort
@@ -59,8 +47,7 @@
     gap: 30px
 
   &__summary
-    display: flex
-    align-items: center
+    +flexAlignCenter()
     gap: 11px
   &[open]
     background: #FFFFFF
@@ -72,10 +59,7 @@
   &__category
     margin-top: 16px
     &-summary
-      font-weight: 400
-      font-size: 14px
-      line-height: 17px
-      color: #6F6E6E
+      +font(400, 14px, 17px, #6F6E6E)
       padding: 8px 11px 11px
       border-left: 5px solid $colorSite
       border-bottom: 1px solid #EBEBEB
@@ -83,14 +67,12 @@
     color: $colorSite
 
 .sort
-  display: flex
+  +flexAlignCenter()
   gap: 28px
-  align-items: center
   &__details
     position: relative
   &__summary
-    display: flex
-    align-items: center
+    +flexAlignCenter()
     gap: 10px
   &__content
     position: absolute
@@ -105,27 +87,19 @@
     background: #FFFFFF
     box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
   &__label
-    display: flex
-    align-items: center
+    +flexAlignCenter()
     gap: 9px
 
 .pagination
   padding-top: 48px
   &__box
-    display: flex
-    align-items: center
-    justify-content: center
+    +flexCenter()
     gap: 18px
   &__numbers
-    display: flex
-    align-items: center
+    +flexAlignCenter()
     gap: 20px
   &__number
-    font-style: normal
-    font-weight: 300
-    font-size: 16px
-    line-height: 19px
-    color: #c4c4c4
+    +font(300, 16px, 19px, #c4c4c4)
 
 ._pagination__active
   color: $colorDetails

@@ -1,0 +1,56 @@
+.registration
+    display: flex
+    justify-content: space-between
+    gap: 128px
+    padding-top: 64px
+    padding-bottom: 96px
+    &__input
+        +container(360px, 45px, #FFFFFF, #A4A4A4)
+        +font(300, 13px, 16px, #B1B1B1)
+        padding: 13px 0 16px 17px
+        margin-top: 20px
+    &__heading
+        display: flex
+        flex-direction: column
+        +font(300, 16px, 19px, $colorContent)
+    &__ratio
+        display: flex
+        flex-direction: row
+        margin: 31px 0 33px
+        gap: 20px
+    &__gender
+        display: flex
+        gap: 10px
+        align-items: center
+        +font(300, 11px, 13px, #000000)
+    &__text
+        +font(300, 13px, 16px, #B1B1B1)
+        padding: 15px 0 39px
+    &__button
+        +flexCenter()
+        gap: 20px
+        +container(167px, 50px, #FFFFFF, $colorSite)
+        +font(400, 14px, 17px, $colorSite)
+        &:hover
+            color: #FFFFFF
+            background: $colorSite,
+        &:hover > svg path
+            fill: #FFFFFF
+
+.loyalty
+    display: flex
+    flex-direction: column
+    gap: 22px
+    &__heading
+        +font(300, 24px, 29px, #000000)
+    &__text
+        +font(300, 24px, 29px, #000000)
+
+.perks
+    display: flex
+    flex-direction: column
+    gap: 16px
+    &__item
+        +font(300, 24px, 29px, #000000)
+    &__check
+        margin-right: 22px
