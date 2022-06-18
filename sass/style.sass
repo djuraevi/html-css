@@ -46,6 +46,7 @@ input[type="number"]::-webkit-inner-spin-button
   justify-content: space-between
   min-height: 75px
   background: $colorContent
+  position: relative
   &__left
     +flexAlignCenter()
     gap: 41px
@@ -54,12 +55,48 @@ input[type="number"]::-webkit-inner-spin-button
     +flexAlignCenter()
     gap: 33px
 
+.menu
+  position: absolute
+  top: 75px
+  right: 0
+  display: flex
+  flex-direction: column
+  gap: 20px
+  width: 232px
+  background: #FFFFFF
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+  padding: 32px
+  box-sizing: border-box
+  margin-bottom: 4px
+  transform: translateY(-120%)
+  transition: transform .5s
+  z-index: 2
+  &__heading
+    +font(700, 14px, 17px, #000000)
+  &__title
+    +font(400, 14px, 17px, $colorSite)
+  &__box
+    display: flex
+    flex-direction: column
+    gap: 11px
+    & > li
+      padding-left: 21px
+    & > li:first-child
+      padding-left: 0
+  &__item
+    +font(400, 14px, 17px, #6F6E6E)
+    &:hover
+      color: $colorSite
+  &__active
+    transform: translateY(0)
+    transition: transform .5s
+
 .promo
   display: flex
   padding-left: calc(50% - 800px)
   padding-right: calc(50% - 800px)
   background: #f1e4e6
-  &__imgage
+  &__image
     width: 50%
 
   &__content
@@ -231,6 +268,7 @@ input[type="number"]::-webkit-inner-spin-button
   &__left
     +flexAlignCenter()
     flex-direction: column
+    gap: 30px
 
   &__right
     +flexAlignCenter()
@@ -238,7 +276,6 @@ input[type="number"]::-webkit-inner-spin-button
 
   &__citation
     max-width: 360px
-    padding-top: $gapGrid
     +font(400, 20px, 24px, #222224)
     text-align: center
 
@@ -253,7 +290,6 @@ input[type="number"]::-webkit-inner-spin-button
     +container(256px, 49px, #e1e1e1, #e1e1e1)
     +font(400, 14px, 17px, #222224)
     +flexAlignCenter()
-    opacity: 0.67
     border-radius: 25px 0 0 25px
 
   &__btn
@@ -277,5 +313,11 @@ input[type="number"]::-webkit-inner-spin-button
       fill: #fff
 
 .form
-  +flexAlignCenter()
   padding-top: 32px
+  +flexAlignCenter()
+
+// style for tablet
+
+  @import 'tablet'
+@import 'mobile'
+@import 'tablet'
