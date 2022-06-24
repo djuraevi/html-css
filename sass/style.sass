@@ -11,6 +11,10 @@
 
 body
   font-family: "Lato", sans-serif
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  margin: 0
 
 a
   text-decoration: none
@@ -39,6 +43,11 @@ input[type="number"]::-webkit-inner-spin-button
   padding-left: calc(50% - #{$widthSite / 2})
   padding-right: calc(50% - #{$widthSite / 2})
 
+.top
+  position: relative
+  overflow: hidden
+  flex-grow: 1
+
 .header
   +flexAlignCenter()
   flex-direction: row
@@ -46,7 +55,6 @@ input[type="number"]::-webkit-inner-spin-button
   justify-content: space-between
   min-height: 75px
   background: $colorContent
-  position: relative
   &__left
     +flexAlignCenter()
     gap: 41px
@@ -58,7 +66,7 @@ input[type="number"]::-webkit-inner-spin-button
 .menu
   position: absolute
   top: 75px
-  right: 0
+  right: -232px
   display: flex
   flex-direction: column
   gap: 20px
@@ -68,9 +76,16 @@ input[type="number"]::-webkit-inner-spin-button
   padding: 32px
   box-sizing: border-box
   margin-bottom: 4px
-  transform: translateY(-120%)
-  transition: transform .5s
+  transition: right .6s
   z-index: 2
+  &__link
+    align-items: center
+    justify-content: space-between
+    background-color: #e8e8e8
+    padding: 8px
+    border-radius: 10px
+    margin-bottom: 24px
+    display: none
   &__heading
     +font(700, 14px, 17px, #000000)
   &__title
@@ -88,8 +103,8 @@ input[type="number"]::-webkit-inner-spin-button
     &:hover
       color: $colorSite
   &__active
-    transform: translateY(0)
-    transition: transform .5s
+    right: 0
+    transition: right .6s
 
 .promo
   display: flex
@@ -260,6 +275,7 @@ input[type="number"]::-webkit-inner-spin-button
   background-position: center bottom
   &__container
     +flexAlignCenter()
+    align-content: center
     flex-direction: row
     justify-content: space-between
     flex-wrap: wrap
@@ -319,5 +335,6 @@ input[type="number"]::-webkit-inner-spin-button
 // style for tablet
 
   @import 'tablet'
-@import 'mobile'
+
 @import 'tablet'
+@import 'mobile'
